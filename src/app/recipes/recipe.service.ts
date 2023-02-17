@@ -8,18 +8,18 @@ export class RecipeService {
     recipeSelected = new EventEmitter<Recipe>();
     private recipes: Recipe[] = [
         new Recipe(
-            "Food",
-            "the thing",
-            "https://www.allrecipes.com/thmb/pl6IzWa0p5VGZP-8ZsF4wfpEIwk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8000900-2000-d41f8a550fe5444894bf4a9e4d84fd1c.jpg",
+            "Tasty schnitzel",
+            "A super tasty schnitzel - just awesome!",
+            "https://external-preview.redd.it/BfcCSSgkoLSH4S8_nq29r_odf4rhWHkmLqu4aLM27lg.jpg?auto=webp&s=ce40ec37f64b4acdbf0fa8554bd185fcf8d2001f",
             [
                 new Ingredient("meat", 1),
                 new Ingredient("French Fries", 20)
             ]
         ),
         new Recipe(
-            "Food2",
-            "the thing",
-            "https://www.allrecipes.com/thmb/pl6IzWa0p5VGZP-8ZsF4wfpEIwk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8000900-2000-d41f8a550fe5444894bf4a9e4d84fd1c.jpg",
+            "Big fat burger",
+            "What else you need to say?",
+            "https://bigfatburgers.com/wp-content/uploads/2019/07/DoubleBaconCheeseBurger.jpg",
             [
                 new Ingredient("Buns", 2),
                 new Ingredient("Meat", 1)
@@ -28,8 +28,13 @@ export class RecipeService {
     ];
 
     constructor(private shoppingListService: ShoppingListService) { }
+
     getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
