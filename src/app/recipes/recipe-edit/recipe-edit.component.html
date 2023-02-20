@@ -18,8 +18,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="imageUrl">Image URL</label>
-                        <input type="text" id="imageUrl" formControlName="imagePath" class="form-control" #imagePath>
+                        <label for="imagePath">Image URL</label>
+                        <input type="text" id="imagePath" formControlName="imagePath" class="form-control" #imagePath>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-xs-12">
-                            <button type="button" class="btn btn-success">Add
+                            <button type="button" class="btn btn-success" (click)="onAddIngredient()">Add
                                 ingredient</button>
                         </div>
                     </div>

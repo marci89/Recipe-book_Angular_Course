@@ -38,7 +38,9 @@ export class RecipeEditComponent implements OnInit {
     if (this.editMode) {
       this.recipeService.updateRecipe(this.id, newRecipe);
     } else {
-      this.recipeService.addRecipe(newRecipe);
+
+      //Ha azonosak az objektum property nevei az összes formControl-éval, akkor akár így is meglehet adni.
+      this.recipeService.addRecipe(this.recipeForm.value);
     }
 
     this.onCancel();
@@ -76,7 +78,7 @@ export class RecipeEditComponent implements OnInit {
 
       const recipe = this.recipeService.getRecipe(this.id);
       recipeName = recipe.name;
-      recipeImagePath = recipe.imageUrl;
+      recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
 
       if (recipe['ingredients']) {
