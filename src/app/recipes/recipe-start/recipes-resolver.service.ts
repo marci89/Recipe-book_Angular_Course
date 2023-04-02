@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Recipe } from '../recipe.model';
-import { DataStorageService } from '../../shared/data-storage.service';
 import { Store } from '@ngrx/store';
 import * as fromApp from '../store/recipe.reducer';
 import { Actions, ofType } from '@ngrx/effects';
