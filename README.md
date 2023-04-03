@@ -3,8 +3,8 @@
 
 This is a basic recipebook with Angular. It was an udemy course with Maximilian Schwarzmüller.
 The project use firebase for bakcend. The state management is implemented by ngrx.
-node version: v18.12.1
-Angular version: 15
+- node version: v18.12.1
+- Angular version: 15
 
 ## Setup
 
