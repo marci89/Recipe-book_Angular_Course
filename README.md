@@ -6,6 +6,7 @@ The project use firebase for bakcend. The state management is implemented by ngr
 - node version: v18.12.1
 - Angular version: 15
 
+
 ## Setup
 
 - You need to install Node.js.
